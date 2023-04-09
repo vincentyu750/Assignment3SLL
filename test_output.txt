@@ -1,0 +1,11 @@
+Build started...
+1>------ Build started: Project: Assignment_3_Group_6, Configuration: Debug Any CPU ------
+1>  Assignment_3_Group_6 -> C:\Users\V\Desktop\Assignment3\Assignment_3_Group_6\bin\Debug\Assignment_3_Group_6.exe
+2>------ Build started: Project: Test_Assignment_3, Configuration: Debug Any CPU ------
+2>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2352,5): warning MSB3270: There was a mismatch between the processor architecture of the project being built "MSIL" and the processor architecture of the reference "C:\Users\V\Desktop\Assignment3\Assignment_3_Group_6\bin\Debug\Assignment_3_Group_6.exe", "AMD64". This mismatch may cause runtime failures. Please consider changing the targeted processor architecture of your project through the Configuration Manager so as to align the processor architectures between your project and references, or take a dependency on references with a processor architecture that matches the targeted processor architecture of your project.
+2>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+2>C:\Users\V\Desktop\Assignment3\Test_Assignment_3\LinkedListTests.cs(19,39,19,52): warning CS0618: 'DataAttribute' is obsolete: 'The DataAttribute class has been deprecated and will be removed in a future release. Please use IParameterDataSource instead.'
+2>Test_Assignment_3 -> C:\Users\V\Desktop\Assignment3\Test_Assignment_3\bin\Debug\net7.0\Test_Assignment_3.dll
+2>Done building project "Test_Assignment_3.csproj".
+========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build started at 3:14 PM and took 02.468 seconds ==========
