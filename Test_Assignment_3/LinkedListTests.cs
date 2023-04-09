@@ -233,5 +233,90 @@ namespace Test_Assignment_3
             string value = (string)this.linkedList.Retrieve(1);
             Assert.AreEqual("b", value);
         }
+
+        //Finding an non-existing node
+        [Test]
+        public void TestFindNullNode()
+        {
+            this.linkedList.Append("a");
+            this.linkedList.Append("b");
+            this.linkedList.Append("c");
+            this.linkedList.Append("d");
+
+            bool contains = this.linkedList.Contains("Z");
+            Assert.False(contains);
+        }
+
+        //Finding the index of a non-existing node
+        [Test]
+        public void TestFindNullNodeIndex()
+        {
+            this.linkedList.Append("a");
+            this.linkedList.Append("b");
+            this.linkedList.Append("c");
+            this.linkedList.Append("d");
+
+            int index = this.linkedList.IndexOf("Z");
+            Assert.AreEqual(-1, index);
+        }
+
+        //Testing if the list is empty
+        [Test]
+        public void TestEmpty()
+        {
+            this.linkedList.Append("a");
+
+            bool empty = this.linkedList.IsEmpty();
+            Assert.False(empty);
+
+            //Deleting node
+            this.linkedList.Delete(0);
+
+            bool empty1 = this.linkedList.IsEmpty();
+            Assert.True(empty1);
+        }
+
+        //Testing size of the list after changes
+        [Test]
+        public void TestSize()
+        {
+            this.linkedList.Append("a");
+            this.linkedList.Append("b");
+            this.linkedList.Append("c");
+            this.linkedList.Append("d");
+
+            int size = this.linkedList.Size();
+            Assert.AreEqual(4, size);
+
+            //Deleting node
+            this.linkedList.Delete(1);
+
+            int size1 = this.linkedList.Size();
+            Assert.AreEqual(3, size1);
+        }
+
+        //Testing putting data out of index range
+        [Test]
+        public void TestOutOfRange()
+        {
+            this.linkedList.Append("a");
+            this.linkedList.Append("b");
+            this.linkedList.Append("c");
+            this.linkedList.Append("d");
+
+            try
+            {
+                this.linkedList.Insert("e", -1);
+                Assert.Fail(); 
+            }
+            catch
+            {
+                this.linkedList.Insert("e", 4);
+            }
+
+            int size = this.linkedList.Size();
+
+            Assert.AreEqual(5, size);
+        }
     }
 }
